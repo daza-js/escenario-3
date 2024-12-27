@@ -5,7 +5,7 @@ const alert = document.getElementsByClassName("alert")[0];
 
 const showAlert = (alertElement, type) => {
     alertElement.style.display = "block";
-    // alertElement.classList.remove("alert-success", "alert-danger");
+    alertElement.classList.remove("alert-success", "alert-danger", "alert-info");
     alertElement.classList.add(`alert-${type}`);
 };
 
