@@ -3,12 +3,19 @@ const form = document.getElementById("numberForm");
 const result = document.getElementById("result");
 const alert = document.getElementsByClassName("alert")[0];
 
+/**
+ * Esta función hace visible el elemento de alerta, elimina cualquier clase de alerta
+ * previamente existente y añade la clase correspondiente al tipo de alerta especificado.
+ */
 const showAlert = (alertElement, type) => {
     alertElement.style.display = "block";
     alertElement.classList.remove("alert-success", "alert-danger", "alert-info");
     alertElement.classList.add(`alert-${type}`);
 };
 
+/**
+ * Función para calcular el número máximo entre tres valores ingresados en un formulario.
+ */
 function calculateMaxNumber(event) {
     event.preventDefault(); // Evitar el envío del formulario
 
